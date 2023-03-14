@@ -3,7 +3,7 @@
 Course for JPA "Guru" from udemy
 
 
-### Section 2: Introduction to Spring DATA JPA
+## Section 2: Introduction to Spring DATA JPA
 
     - JPA
         - Is the JPA version of data repository access of the Spring Data family of Prrojects
@@ -31,3 +31,19 @@ Course for JPA "Guru" from udemy
         - Data Repositories.
     - SQL Logging Properties
     - H2 Database Console.
+
+## Section 3: MySQL
+
+    - Relational database principles.
+        - Database Tables
+        - Primary key.
+        - Table Relations:
+            - one to one
+            - one to many
+            - many to many
+        - ACID principle
+        - RDBMS have 4 important characteristics:
+            - Data definition
+            - Data manipulation
+            - Data retrieval
+            - Administration
