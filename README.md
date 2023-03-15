@@ -47,3 +47,14 @@ Course for JPA "Guru" from udemy
             - Data manipulation
             - Data retrieval
             - Administration
+
+## Section 4: Introduction to Testing with Spring Boot
+
+    - Testing with databases.
+    - JPA test API:
+            - test splice. 
+            - Test transaction.
+    - Bootstrap in test.
+
+
+
