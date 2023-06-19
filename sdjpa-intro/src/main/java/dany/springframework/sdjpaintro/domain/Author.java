@@ -2,6 +2,7 @@ package dany.springframework.sdjpaintro.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.util.Objects;
@@ -9,7 +10,9 @@ import java.util.Objects;
 @Entity
 public class Author {
 
-  @Id @GeneratedValue private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
   private String firstName;
   private String LastName;

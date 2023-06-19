@@ -69,7 +69,7 @@ Course for JPA "Guru" from udemy
         - Integration test with MySQL
     - Schema initialization.
 
-## Section 5: Using LiquidBase
+## Section 6: Using LiquidBase
 
     - Migrations Overview.
     - Database Migration tools can:
@@ -88,7 +88,7 @@ Course for JPA "Guru" from udemy
     - Organize changelog.
     - https://docs.liquibase.com/tools-integrations/springboot/springboot.html
 
-## Section 6: Using Flyway
+## Section 7: Using Flyway
     - Flyway is easy to use.
     - Commands
         - Migrate
@@ -101,5 +101,23 @@ Course for JPA "Guru" from udemy
     - Alter existing table with Flaway
     - Configuring Flyway
 
+## Section 8: Hibernate Primary Keys
+     - Numeric Primary Keys GenerationType
+        - AUDTO 
+        - SEQUENCE 
+        - IDENTITY  
+        - TABLE
+    - UUID Ubuversally Unique Idenrifier.
+    - Natural promary keys.
+        - like UPC or ISBN.
+        - Common in old legacy databases.
+        - not considered best practice.
+    - Composite primary keys
+        - Not considered best practice.
+        - common in legacy DB.
+    - Vendor specific Flyway migrations.
+    - Embedded and composite Primary Keys.
+
 ## Others
-    -Dspring.profiles.active=local in VM parameters
+    -Dspring.profiles.active=local in VM parameters.
+    

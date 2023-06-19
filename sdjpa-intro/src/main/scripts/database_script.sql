@@ -14,3 +14,5 @@ create table book_seq (
 ) engine=InnoDB;
 
 insert into book_seq values ( 1 );
+
+select hex(id) from bookdb.book_uuid bu;
