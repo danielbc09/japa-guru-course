@@ -2,7 +2,6 @@
 
 Course for JPA "Guru" from udemy
 
-
 ## Section 2: Introduction to Spring DATA JPA
 
     - JPA
@@ -56,5 +55,39 @@ Course for JPA "Guru" from udemy
             - Test transaction.
     - Bootstrap in test.
 
+## Section 5: Hibernate with MySQL
 
+    - Configure Hibernate to talk with MySQL.
+    - Hibernate DDL Schema generation tool.
+        - Hibernate has the ability to reflect on JPA annotated classes to determine necessary database structure.
+        - Hibernate schema generation Tool uses reflection on JPA Entities to deermine database structure.
+        - default is camel case to snake case.
+            - productioNDescription -> PRODUCT_DESCRIPTION.
+        - Datatypes are alse defaulted.
+        - DB Schema management:
+            - You could do it with tools as flyway or liquidbase.
+        - Integration test with MySQL
+    - Schema initialization.
 
+## Section 5: Using LiquidBase
+
+    - Migrations Overview.
+    - Database Migration tools can:
+        - Create a new database.
+        - Hold history of migrations.
+        - Have a reproducible state of the database
+        - Help manage changes being applied to numerous database instances.
+    - Liquidbase Terminology
+    - Liquidbase best practices ¿?.
+    - Run liquid base:
+            - Command line.
+            - Maven.
+            - Spring Boot.
+    - https://docs.liquibase.com/tools-integrations/maven/home.html
+    - Use liquidbase with maven.
+    - Organize changelog.
+    - https://docs.liquibase.com/tools-integrations/springboot/springboot.html
+    
+
+## Others
+    -Dspring.profiles.active=local in VM parameters

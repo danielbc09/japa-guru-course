@@ -25,7 +25,7 @@ public class SpringBootJpaSpliceTest {
   void testJpTestSplice() {
     long countBefore = bookRepository.count();
 
-    bookRepository.save(new Book("My test book", "13213213", "Self"));
+    bookRepository.save(new Book("My test book", "13213213", "Self", null));
 
     long countAfter = bookRepository.count();
 
