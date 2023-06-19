@@ -10,8 +10,8 @@
                    http://www.liquibase.org/xml/ns/dbchangelog
                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
 
-    <include file="db/changelog/baseline-changelog.xml"></include>
-    <include file="db/changelog/init-hibernate.xml"></include>
-    <include file="db/changelog/add-author.xml"></include>
-    <include file="db/changelog/18-01-add-author-id-to-book-changelog.xml"></include>
+    <include file="db/changelog/liquidbase/baseline-changelog.xmlangelog.xml"></include>
+    <include file="db/changelog/liquidbase/init-hibernate.xmlbernate.xml"></include>
+    <include file="db/changelog/liquidbase/add-author.xml-author.xml"></include>
+    <include file="db/changelog/liquidbase/18-01-add-author-id-to-book-changelog.xmlangelog.xml"></include>
 </databaseChangeLog>

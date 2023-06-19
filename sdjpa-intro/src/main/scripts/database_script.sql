@@ -8,3 +8,9 @@ CREATE ROUTINE, ALTER ROUTINE, EVENT, TRIGGER ON `bookdb`.* TO `bookadmin`@`%`;
 CREATE USER IF NOT EXISTS `bookuser`@`%` IDENTIFIED WITH mysql_native_password BY 'password';
 GRANT SELECT, INSERT, UPDATE, DELETE, SHOW VIEW ON `bookdb`.* TO `bookuser`@`%`;
 FLUSH PRIVILEGES;
+
+create table book_seq (
+    next_val bigint
+) engine=InnoDB;
+
+insert into book_seq values ( 1 );

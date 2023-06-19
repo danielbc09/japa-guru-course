@@ -1,0 +1,16 @@
+server:
+  port: '8081'
+spring:
+  datasource:
+    username: bookuser
+    password: password
+    url: 'jdbc:mysql://127.0.0.1:3306/bookdb?useUnicode'
+  sql:
+    init:
+      mode: always
+    #liquibase:
+    # user: bookadmin
+    # password: password
+  flyway:
+    user: bookadmin
+    password: password

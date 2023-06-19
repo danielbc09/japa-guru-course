@@ -87,7 +87,19 @@ Course for JPA "Guru" from udemy
     - Use liquidbase with maven.
     - Organize changelog.
     - https://docs.liquibase.com/tools-integrations/springboot/springboot.html
-    
+
+## Section 6: Using Flyway
+    - Flyway is easy to use.
+    - Commands
+        - Migrate
+        - Info
+        - Validate
+        - Undo
+        - Baseline
+        - Repair.
+    - Configure Spring Boot support for Flyway
+    - Alter existing table with Flaway
+    - Configuring Flyway
 
 ## Others
     -Dspring.profiles.active=local in VM parameters
