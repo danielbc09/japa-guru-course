@@ -30,7 +30,7 @@ public class BookDaoTmplImpl implements BookDaoTmpl {
         book.getIsbn(),
         book.getPublisher(),
         book.getTitle(),
-        book.getAuthorId());
+        book.getAuthor().getId());
 
     Long createdId = jdbcTemplate.queryForObject("SELECT LAST_INSERT_ID()", Long.class);
 
@@ -44,7 +44,7 @@ public class BookDaoTmplImpl implements BookDaoTmpl {
         book.getIsbn(),
         book.getPublisher(),
         book.getTitle(),
-        book.getAuthorId(),
+        book.getAuthor().getId(),
         book.getId());
 
     return this.getById(book.getId());

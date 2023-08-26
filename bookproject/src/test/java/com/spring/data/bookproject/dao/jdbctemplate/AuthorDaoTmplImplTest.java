@@ -6,11 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.Import;
+import org.springframework.dao.TransientDataAccessResourceException;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.dao.EmptyResultDataAccessException;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+
 @ActiveProfiles("local")
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
@@ -28,6 +29,11 @@ public class AuthorDaoTmplImplTest {
 
     authorDao.deleteAuthorById(saved.getId());
 
+    assertThrows(
+        TransientDataAccessResourceException.class,
+        () -> {
+          authorDao.getById(saved.getId());
+        });
   }
 
   @Test
@@ -69,6 +75,4 @@ public class AuthorDaoTmplImplTest {
 
     assertThat(author.getId()).isNotNull();
   }
-
-  private class EmptyResultDataAccessException {}
 }

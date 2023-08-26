@@ -1,7 +1,6 @@
 package com.spring.data.bookproject.dao.jdbctemplate;
 
-import com.spring.data.bookproject.dao.jdbc.AuthorDaoImpl;
-import com.spring.data.bookproject.dao.jdbc.BookDaoImpl;
+import com.spring.data.bookproject.domain.Author;
 import com.spring.data.bookproject.domain.Book;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +16,9 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @ActiveProfiles("local")
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-@Import({AuthorDaoImpl.class, BookDaoImpl.class})
+@Import({AuthorDaoTmplImpl.class, BookDaoTmplImpl.class})
 public class BookDaoTmplImplTest {
-  @Autowired BookDaoImpl bookDao;
+  @Autowired BookDaoTmplImpl bookDao;
 
   @Test
   void testDeleteBook() {
@@ -27,6 +26,9 @@ public class BookDaoTmplImplTest {
     book.setIsbn("1234");
     book.setPublisher("Self");
     book.setTitle("my book");
+    Author author = new Author();
+    author.setId(3L);
+    book.setAuthor(author);
     Book saved = bookDao.saveNewBook(book);
 
     bookDao.deleteBookById(saved.getId());
@@ -44,7 +46,9 @@ public class BookDaoTmplImplTest {
     book.setIsbn("1234");
     book.setPublisher("Self");
     book.setTitle("my book");
-    book.setAuthorId(1L);
+    Author author = new Author();
+    author.setId(3L);
+    book.setAuthor(author);
     Book saved = bookDao.saveNewBook(book);
 
     saved.setTitle("New Book");
@@ -61,7 +65,9 @@ public class BookDaoTmplImplTest {
     book.setIsbn("1234");
     book.setPublisher("Self");
     book.setTitle("my book");
-    book.setAuthorId(1L);
+    Author author = new Author();
+    author.setId(3L);
+    book.setAuthor(author);
 
     Book saved = bookDao.saveNewBook(book);
 

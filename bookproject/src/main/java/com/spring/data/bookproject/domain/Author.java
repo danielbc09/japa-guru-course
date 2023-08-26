@@ -1,9 +1,8 @@
 package com.spring.data.bookproject.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Author {
@@ -11,6 +10,7 @@ public class Author {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
+  @Transient private List<Book> books;
   private String firstName;
   private String lastName;
 
@@ -36,5 +36,13 @@ public class Author {
 
   public void setLastName(String lastName) {
     this.lastName = lastName;
+  }
+
+  public List<Book> getBooks() {
+    return books;
+  }
+
+  public void setBooks(List<Book> books) {
+    this.books = books;
   }
 }
