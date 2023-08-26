@@ -129,6 +129,12 @@ Course for JPA "Guru" from udemy
     - Release connections from DB.
     - Using preparing statements
 
+## Section 10: Spring JDBC Template.
+
+    - Creating DAOS with JDBC Template
+    - Testing
+        - JDBC Template can be rolled back.
+    
 
 ## Others
     -Dspring.profiles.active=local in VM parameters.

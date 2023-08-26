@@ -1,8 +1,8 @@
-package com.spring.data.bookproject.dao;
+package com.spring.data.bookproject.dao.jdbctemplate;
 
 import com.spring.data.bookproject.domain.Book;
 
-public interface BookDao {
+public interface BookDaoTmpl {
   Book getById(Long id);
 
   Book findBookByTitle(String title);

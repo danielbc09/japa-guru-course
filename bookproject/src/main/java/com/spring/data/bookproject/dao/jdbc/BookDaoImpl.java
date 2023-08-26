@@ -1,4 +1,4 @@
-package com.spring.data.bookproject.dao;
+package com.spring.data.bookproject.dao.jdbc;
 
 import com.spring.data.bookproject.domain.Book;
 

@@ -1,24 +1,25 @@
-package com.spring.data.bookproject.dao;
+package com.spring.data.bookproject.dao.jdbctemplate;
 
 import com.spring.data.bookproject.dao.jdbc.AuthorDaoImpl;
-import com.spring.data.bookproject.dao.jdbc.BookDao;
 import com.spring.data.bookproject.dao.jdbc.BookDaoImpl;
-import com.spring.data.bookproject.domain.Author;
 import com.spring.data.bookproject.domain.Book;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.context.annotation.Import;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.test.context.ActiveProfiles;
+
+import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @ActiveProfiles("local")
 @DataJpaTest
-@Import({AuthorDaoImpl.class, BookDaoImpl.class})
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-public class BookDaoImplTest {
-  @Autowired BookDao bookDao;
+@Import({AuthorDaoImpl.class, BookDaoImpl.class})
+public class BookDaoTmplImplTest {
+  @Autowired BookDaoImpl bookDao;
 
   @Test
   void testDeleteBook() {
@@ -30,9 +31,11 @@ public class BookDaoImplTest {
 
     bookDao.deleteBookById(saved.getId());
 
-    Book deleted = bookDao.getById(saved.getId());
-
-    assertThat(deleted).isNull();
+    assertThrows(
+        EmptyResultDataAccessException.class,
+        () -> {
+          bookDao.getById(saved.getId());
+        });
   }
 
   @Test
@@ -41,10 +44,7 @@ public class BookDaoImplTest {
     book.setIsbn("1234");
     book.setPublisher("Self");
     book.setTitle("my book");
-
-    Author author = new Author();
-    author.setId(3L);
-    book.setAuthor(author);
+    book.setAuthorId(1L);
     Book saved = bookDao.saveNewBook(book);
 
     saved.setTitle("New Book");
@@ -61,9 +61,8 @@ public class BookDaoImplTest {
     book.setIsbn("1234");
     book.setPublisher("Self");
     book.setTitle("my book");
-    Author author = new Author();
-    author.setId(3L);
-    book.setAuthor(author);
+    book.setAuthorId(1L);
+
     Book saved = bookDao.saveNewBook(book);
 
     assertThat(saved).isNotNull();

@@ -1,5 +1,6 @@
 package com.spring.data.bookproject.dao;
 
+import com.spring.data.bookproject.dao.jdbc.AuthorDao;
 import com.spring.data.bookproject.domain.Author;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,8 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class AuthorDaoImplTest {
 
-  @Autowired AuthorDao authorDao;
+  @Autowired
+  AuthorDao authorDao;
 
   @Test
   void testGetAuthorById() {
