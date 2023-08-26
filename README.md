@@ -121,13 +121,13 @@ Course for JPA "Guru" from udemy
 ## Section 9: DAO Pattern with JDBC.
     
     - Set up bookproject Project with Flyway configuration.
-    - DAO Pattern introduction.
+    - DAO Pattern introduction with JDBC.
         - Old tool, before JPA and Hibernate.
         - Isolate persistence operations from the application layer.
         - DAO API- Provide interface for CRUD operations(similar to Repositories)
     - Old way connection with Datasource.
     - Release connections from DB.
-    - using preparing statements
+    - Using preparing statements
 
 
 ## Others

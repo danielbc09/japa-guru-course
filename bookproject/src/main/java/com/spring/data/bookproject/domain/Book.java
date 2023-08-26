@@ -1,9 +1,6 @@
 package com.spring.data.bookproject.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Objects;
 
@@ -16,7 +13,7 @@ public class Book {
   private String title;
   private String isbn;
   private String publisher;
-  private Long authorId;
+  @Transient private Author authorId;
 
   public Book() {}
 
@@ -73,11 +70,11 @@ public class Book {
     this.publisher = publisher;
   }
 
-  public Long getAuthorId() {
+  public Author getAuthor() {
     return authorId;
   }
 
-  public void setAuthorId(Long authorId) {
+  public void setAuthor(Author authorId) {
     this.authorId = authorId;
   }
 }
