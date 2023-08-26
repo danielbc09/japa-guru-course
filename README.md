@@ -118,6 +118,18 @@ Course for JPA "Guru" from udemy
     - Vendor specific Flyway migrations.
     - Embedded and composite Primary Keys.
 
+## Section 9: DAO Pattern with JDBC.
+    
+    - Set up bookproject Project with Flyway configuration.
+    - DAO Pattern introduction.
+        - Old tool, before JPA and Hibernate.
+        - Isolate persistence operations from the application layer.
+        - DAO API- Provide interface for CRUD operations(similar to Repositories)
+    - Old way connection with Datasource.
+    - Release connections from DB.
+    - using preparing statements
+
+
 ## Others
     -Dspring.profiles.active=local in VM parameters.
     
