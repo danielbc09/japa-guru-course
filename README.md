@@ -89,6 +89,7 @@ Course for JPA "Guru" from udemy
     - https://docs.liquibase.com/tools-integrations/springboot/springboot.html
 
 ## Section 7: Using Flyway
+
     - Flyway is easy to use.
     - Commands
         - Migrate
@@ -102,6 +103,7 @@ Course for JPA "Guru" from udemy
     - Configuring Flyway
 
 ## Section 8: Hibernate Primary Keys
+
      - Numeric Primary Keys GenerationType
         - AUDTO 
         - SEQUENCE 
@@ -119,7 +121,7 @@ Course for JPA "Guru" from udemy
     - Embedded and composite Primary Keys.
 
 ## Section 9: DAO Pattern with JDBC.
-    
+
     - Set up bookproject Project with Flyway configuration.
     - DAO Pattern introduction with JDBC.
         - Old tool, before JPA and Hibernate.
@@ -134,8 +136,25 @@ Course for JPA "Guru" from udemy
     - Creating DAOS with JDBC Template
     - Testing
         - JDBC Template can be rolled back.
-    
 
+## Section 11: Hibernate DAO.
+
+    - ORM solution for Java.
+    - Implements java JPA specification.
+    - Persistence Context.
+    - Caching.
+    - Typed Queries.    
+    - Author CRUD.
+    - Book CRUD.
+
+## Section 12: Hibernate Queries.
+    - Create queries.
+    - TypedQuery patern.
+    - Named Queries, and with parameters.
+    - Criteria Queries.
+    - Native SQL Queries.
+    
 ## Others
+
     -Dspring.profiles.active=local in VM parameters.
     
