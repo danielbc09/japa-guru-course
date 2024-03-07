@@ -148,12 +148,25 @@ Course for JPA "Guru" from udemy
     - Book CRUD.
 
 ## Section 12: Hibernate Queries.
+
     - Create queries.
     - TypedQuery patern.
     - Named Queries, and with parameters.
     - Criteria Queries.
     - Native SQL Queries.
-    
+
+## Section 13: Spring Data JPA Queries. (JPA Queries Project)
+
+    - Spring Data JPA Query Methods.
+    - CRUD With JPA usign repositories.
+    - Query methods.
+    - Handle Null values.
+    - Use streams with repository.
+    - Asynchronous Query Results.
+    - Declaring Queries Using @Query
+    - Native SQL Queries
+    - JPA Named Queries (Horrible Pattern)
+
 ## Others
 
     -Dspring.profiles.active=local in VM parameters.
